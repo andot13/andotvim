@@ -10,6 +10,7 @@ Plugins
 - [vim-surround](https://github.com/tpope/vim-surround)
 - [tcomment_vim](https://github.com/tomtom/tcomment_vim)
 - [vim-move](https://github.com/tomtom/tcomment_vi://github.com/matze/vim-move)
+- [vim-multiple-cursor](https://github.com/terryma/vim-multiple-cursors)
 
 Basics
 
@@ -17,12 +18,19 @@ Basics
 
 `,` as leader key
 
+`Shift + k` Move selected a line going top
+`Shift + j` Move selected a line going bottom
+
 Window Movements
 
-`shift + h` Move window left 
-`shift + j` Move window down 
-`shift + k` Move window up 
-`shift + l` Move window right 
+`ctrl + h` Move window left 
+`ctrl + j` Move window down 
+`ctrl + k` Move window up 
+`ctrl + l` Move window right 
+
+Multiple Select
+
+`ctrl + n` Select 
 
 Todo
 This is a work in progress, and I am still learning. If you have any suggestions to improve please let me know.
