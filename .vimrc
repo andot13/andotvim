@@ -37,10 +37,12 @@ imap ;; <Esc>
 nmap ;; i
 vmap ;; <Esc>
 
-nnoremap <S-h> <C-w>h
-nnoremap <S-j> <C-w>j
-nnoremap <S-k> <C-w>k
-nnoremap <S-l> <C-w>l
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -54,6 +56,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdTree'
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'terryma/vim-multiple-cursors'
 Bundle 'matze/vim-move'
 
 " All of your Plugins must be added before the following line
