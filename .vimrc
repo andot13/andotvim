@@ -19,6 +19,7 @@ set autoindent
 set smartindent
 
 let g:move_key_modifier = 'S'
+let g:sparkupExecuteMapping = '<S-e>'
 
 " # Tabbing # "
 
@@ -49,7 +50,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'mattn/emmet-vim'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdTree'
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
