@@ -1,7 +1,6 @@
 execute pathogen#infect()
 syntax on
 set nocompatible
-filetype off 
 
 set number
 set incsearch
@@ -9,29 +8,26 @@ set smartcase
 set showmatch
 set hlsearch
 set autoindent
-set tabstop=4
+set tabstop=2
+set nowrap
 
 set expandtab
-set softtabstop=4
-set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set shiftwidth=4
+set softtabstop=2
+set backspace=indent,eol,start 
+set shiftwidth=2
 set autoindent
 set smartindent
 
 let g:move_key_modifier = 'S'
-let g:sparkupExecuteMapping = '<S-e>'
+let g:user_emmet_leader_key = ','
 
-" # Tabbing # "
 
 vmap <Tab> >gv
 vmap <S-Tab> <gv
-" gv will keep the highlights after tabbing
 
+let mapleader = ','
+let g:mapleader = ','
 
-" # Leader # "
-
-let mapleader = ","
-let g:mapleader = ","
 
 imap ;; <Esc>
 nmap ;; i
@@ -43,31 +39,34 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 
-
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdTree'
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'mattn/emmet-vim'
 Bundle 'matze/vim-move'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()
+filetype plugin indent on
 
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 map <leader>n :NERDTreeToggle<CR>
 map <leader>c <c-_><c-_>
+
+nmap <leader>s :w<cr>
+imap <leader>s <esc>:w<cr>a
+
+nmap <leader>q :q<cr>
+imap <leader>q <esc>:q<cr>a
+
+nmap <leader>qq :q!<cr>
+imap <leader>qq <esc>:q!<cr>a
 
 syntax on
 colorscheme sourcerer
